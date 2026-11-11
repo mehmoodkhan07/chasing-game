@@ -27,7 +27,8 @@ The supplied cover art fills the game's opening screen. Tap the start button, ta
 - **Records and trophies:** track your personal best, lifetime coins, longest distance, mice caught, and five milestones.
 - **Mobile controls:** touch buttons and swipe gestures, with responsive layouts for portrait and landscape screens.
 - **Local progress saving:** scores, coins, unlocked stages, trophies, and preferences save in this browser on this device.
-- **No build step:** the game is a single HTML file and loads Three.js from a CDN.
+- **Installable web app:** add Lion Chase to an Android or iOS home screen with a branded app icon and standalone launch.
+- **No build step:** the game is static HTML and loads Three.js from a CDN.
 
 ## Play the game
 
@@ -43,7 +44,11 @@ If your browser blocks local scripts or assets, serve the folder over HTTP inste
 python -m http.server 8000
 ```
 
-Then visit [http://localhost:8000/](http://localhost:8000/). The first load needs an internet connection to fetch Three.js and its model loader from the CDN.
+Then visit [http://localhost:8000/](http://localhost:8000/). The first load needs an internet connection to fetch Three.js and its model loader from the CDN. For Vercel, deploy the repository root so `index.html`, `manifest.webmanifest`, `sw.js`, `icons/`, and both cover images are published. Vercel provides HTTPS, which browsers require for app installation.
+
+## Install on a phone
+
+Tap **Download App** on the opening screen or Play page. On supported Android browsers, this opens the browser install prompt. If no prompt appears, use the browser menu and choose **Install app** or **Add to Home screen**. On iPhone or iPad, open the game in Safari, tap **Share**, choose **Add to Home Screen**, then confirm. iOS does not allow websites to trigger its install prompt directly. The installed app uses the Lion Chase cover based icon; the opening screen selects `image2.jpg` on small screens.
 
 ## How to play
 
@@ -89,7 +94,11 @@ The game stores progress in the browser's `localStorage`. It is local to the bro
 | --- | --- |
 | `index.html` | Complete game, UI, styles, gameplay, settings, and save logic; Vercel homepage |
 | `Lion Chase.html` | Compatibility redirect to `index.html` |
-| `image.png` | Cover art used on the full-screen opening screen |
+| `image.png` | Landscape cover art for the opening screen and app icon |
+| `image2.jpg` | Portrait cover art selected on small screens |
+| `manifest.webmanifest` | Install name, app display mode, colors, and icons |
+| `sw.js` | Service worker that caches the app shell for repeat visits |
+| `icons/` | 192 px, 512 px, and Apple home-screen icons |
 | `assets/chase-preview.gif` | Animated README preview created from the cover artwork |
 | `README.md` | Project overview and player guide |
 
@@ -110,5 +119,6 @@ The game stores progress in the browser's `localStorage`. It is local to the bro
 ## License and attribution
 
 The repository includes the supplied `image.png` cover artwork. No separate license file is currently included; add one if you intend to distribute or reuse the project publicly.
+
 
 

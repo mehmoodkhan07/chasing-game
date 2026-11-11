@@ -1,0 +1,15 @@
+﻿{
+  "name": "Lion Chase",
+  "short_name": "Lion Chase",
+  "description": "Run the golden trail in a lion and mouse adventure.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#133e36",
+  "theme_color": "#133e36",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
