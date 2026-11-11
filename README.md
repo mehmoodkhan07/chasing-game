@@ -48,7 +48,7 @@ Then visit [http://localhost:8000/](http://localhost:8000/). The first load need
 
 ## Install on a phone
 
-Tap **Download App** on the opening screen or Play page. On supported Android browsers, this opens the browser install prompt. If no prompt appears, use the browser menu and choose **Install app** or **Add to Home screen**. On iPhone or iPad, open the game in Safari, tap **Share**, choose **Add to Home Screen**, then confirm. iOS does not allow websites to trigger its install prompt directly. The installed app uses the Lion Chase cover based icon; the opening screen selects `image2.jpg` on small screens.
+Tap **Download App** on the opening screen or Play page. On supported Android browsers, this opens the browser install prompt. If no prompt appears, use the browser menu and choose **Install app** or **Add to Home screen**. On iPhone or iPad, open the game page in Safari (there is no App Store download for this web app), tap **Share** (the square with the up arrow), scroll to **Add to Home Screen**, then tap **Add** in the upper-right. The installed Lion Chase icon will appear on the Home Screen. The in-game **Settings → Install the game → Install guide** shows the same steps. iOS does not allow websites to trigger its install prompt directly. The installed app uses the Lion Chase cover based icon; the opening screen selects `image2.jpg` on small screens.
 
 ## How to play
 
@@ -119,6 +119,7 @@ The game stores progress in the browser's `localStorage`. It is local to the bro
 ## License and attribution
 
 The repository includes the supplied `image.png` cover artwork. No separate license file is currently included; add one if you intend to distribute or reuse the project publicly.
+
 
 
 
