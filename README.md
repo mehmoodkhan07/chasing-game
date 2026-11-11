@@ -34,8 +34,8 @@ The supplied cover art fills the game's opening screen. Tap the start button, ta
 ### Quick start
 
 1. Download or clone this repository.
-2. Keep `Lion Chase.html` and `image.png` together in the same folder.
-3. Open `Lion Chase.html` in a current desktop or mobile browser with internet access.
+2. Keep `index.html` and `image.png` together in the same folder.
+3. Open `index.html` in a current desktop or mobile browser with internet access.
 
 If your browser blocks local scripts or assets, serve the folder over HTTP instead:
 
@@ -43,7 +43,7 @@ If your browser blocks local scripts or assets, serve the folder over HTTP inste
 python -m http.server 8000
 ```
 
-Then visit [http://localhost:8000/Lion%20Chase.html](http://localhost:8000/Lion%20Chase.html). The first load needs an internet connection to fetch Three.js and its model loader from the CDN.
+Then visit [http://localhost:8000/](http://localhost:8000/). The first load needs an internet connection to fetch Three.js and its model loader from the CDN.
 
 ## How to play
 
@@ -87,7 +87,8 @@ The game stores progress in the browser's `localStorage`. It is local to the bro
 
 | File | Purpose |
 | --- | --- |
-| `Lion Chase.html` | Complete game, UI, styles, gameplay, settings, and save logic |
+| `index.html` | Complete game, UI, styles, gameplay, settings, and save logic; Vercel homepage |
+| `Lion Chase.html` | Compatibility redirect to `index.html` |
 | `image.png` | Cover art used on the full-screen opening screen |
 | `assets/chase-preview.gif` | Animated README preview created from the cover artwork |
 | `README.md` | Project overview and player guide |
@@ -95,7 +96,7 @@ The game stores progress in the browser's `localStorage`. It is local to the bro
 ## Troubleshooting
 
 - **A blank screen or missing 3D scene:** confirm internet access so the Three.js CDN scripts can load, then refresh.
-- **Cover art does not appear:** make sure `image.png` is beside `Lion Chase.html` and keep the filename unchanged.
+- **Cover art does not appear:** make sure `image.png` is beside `index.html` and keep the filename unchanged.
 - **Voice is silent or the preferred voice is missing:** check device volume, enable the Voice Guide setting, and choose an available installed voice. Some browsers require a user tap before speaking.
 - **Records appear empty:** open the same browser profile and origin used to play; local files and localhost can have separate saved data.
 
@@ -109,3 +110,5 @@ The game stores progress in the browser's `localStorage`. It is local to the bro
 ## License and attribution
 
 The repository includes the supplied `image.png` cover artwork. No separate license file is currently included; add one if you intend to distribute or reuse the project publicly.
+
+
